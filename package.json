@@ -23,5 +23,14 @@
   "bugs": {
     "url": "https://github.com/CurrenteCalamo/ParserNodeJs/issues"
   },
-  "homepage": "https://github.com/CurrenteCalamo/ParserNodeJs#readme"
+  "homepage": "https://github.com/CurrenteCalamo/ParserNodeJs#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cheerio": "^1.0.0-rc.10",
+    "puppeteer": "^13.6.0"
+  }
 }
+ 
