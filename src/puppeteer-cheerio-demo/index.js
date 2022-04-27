@@ -1,5 +1,5 @@
-const puppeteer = require('puppeteer');
-const cheerio = require('cheerio');
+import cheerio from "cheerio"
+import puppeteer from "puppeteer"
 
 const options = {
   uri: `https://kanobu.ru/games/popular/?page=1`,
@@ -22,4 +22,4 @@ const scrape = async (options) => {
 };
 
 
-module.exports = (params) => scrape({ ...options, ...params }) 
+export default (params) => scrape({ ...options, ...params }) 

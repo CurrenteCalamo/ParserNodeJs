@@ -1,6 +1,6 @@
-const puppeteer = require('puppeteer');
-const fs = require('fs');
-const path = require('path');
+import puppeteer from 'puppeteer'
+import { appendFileSync } from 'fs';
+import { buffer } from 'stream/consumers';
 
 const options = {
     launch: { headless: false },
@@ -8,7 +8,7 @@ const options = {
     url: 'https://kanobu.ru/games/popular/?page=1',
     file: {
         regexp: /\.svg/,
-        path: './test.svg',
+        path: './download/test.svg',
         selector: '.style_button__OyUbx.HeaderNotifications_button__5Dh3t'
     }
 };
@@ -16,11 +16,11 @@ const options = {
 
 const writeFileInterceptor = ({ file }) => {
     return (e) => {
-        // console.log(e._url)
+        console.log(e._url)
         if (file.regexp.test(e._url)) {
+            console.log(buffer.toString())
             e.buffer().then(buffer => {
-                // console.log(buffer.toString())
-                fs.appendFileSync(path.join(__dirname, file.path), buffer.toString());
+                appendFileSync(file.path, buffer.toString());
             });
         }
     }
@@ -40,4 +40,6 @@ const scrape = async (options) => {
 
     await browser.close();
 };
-module.exports = async (params) => scrape({ ...options, ...params });
+
+
+export default (params) => scrape({ ...options, ...params });

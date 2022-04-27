@@ -1,5 +1,5 @@
-const puppeteer = require('puppeteer');
-const cheerio = require('cheerio');
+import cheerio from "cheerio"
+import puppeteer from "puppeteer"
 
 const options = {
     search: 'bicoin',
@@ -7,6 +7,7 @@ const options = {
     setViewport: { width: 1240, height: 680 },
     transform: (body) => cheerio.load(body)
 };
+
 const getSearchUrl = (options) => {
     const userToSearch = options.search || 'john';
     return `https://github.com/search?q=${userToSearch}&type=Users`;
@@ -15,6 +16,7 @@ const getSearchUrl = (options) => {
 const search = async (page, options) => {
     await page.goto(getSearchUrl(options), { waitUntil: ['domcontentloaded'] });
 }
+
 const login = async (page, options) => {
     const CREDS = {
         username: options.username,
@@ -34,7 +36,6 @@ const login = async (page, options) => {
     await page.waitForNavigation();
 }
 
-
 const scrape = async (options) => {
     const browser = await puppeteer.launch(options.launch);
     const page = await browser.newPage();
@@ -48,6 +49,4 @@ const scrape = async (options) => {
 }
 
 
-
-module.exports =
-    (params) => scrape({ ...options, ...params });
+export default (params) => scrape({ ...options, ...params });

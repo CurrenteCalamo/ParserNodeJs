@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/CurrenteCalamo/ParserNodeJs#readme",
   "devDependencies": {
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
     "jest": "^27.5.1"
   },
   "dependencies": {
@@ -32,5 +35,13 @@
     "cheerio": "^1.0.0-rc.10",
     "puppeteer": "^13.6.0",
     "request-promise": "^4.2.6"
+  },
+  "type": "module",
+  "jest": {
+    "verbose": true,
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
   }
 }

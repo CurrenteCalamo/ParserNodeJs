@@ -1,7 +1,6 @@
-const puppeteer = require("puppeteer");
+import puppeteer from 'puppeteer'
 
 const scrape = async () => {
-
     const browser = await puppeteer.launch({
         headless: false
     });
@@ -13,12 +12,12 @@ const scrape = async () => {
     });
 
     await page.goto('https://google.com/');
-
     await page.screenshot({
-        path: 'google.png'
+        path: './download/screenshot.png'
     });
 
     await browser.close();
 }
 
-module.exports = { scrape }
+
+export default scrape

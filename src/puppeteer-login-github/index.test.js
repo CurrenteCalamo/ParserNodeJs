@@ -1,10 +1,9 @@
-const scrape = require('./index');
-const config = require('../config');
-
+import scrape from './index'
+import config from '../config'
 
 jest.setTimeout(500000);
-describe('puppeteer login github', () => {
-    test('should return array', async () => {
+describe('puppeter-login-github :', () => {
+    test('should something', async () => {
         await scrape({
             username: config.github.username,
             password: config.github.password,

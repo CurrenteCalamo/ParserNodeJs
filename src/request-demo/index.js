@@ -1,8 +1,9 @@
-const request = require('request-promise');
-const cheerio = require('cheerio');
+import cheerio from "cheerio"
+import request from "request-promise"
+
 
 const options = {
-  uri: "https://www.google.com",
+  uri: "https://animebee.to/home",
   transform: (body) => cheerio.load(body)
 };
 
@@ -10,4 +11,5 @@ const scrape = async (options) => {
   return await request(options);
 };
 
-module.exports = (params) => scrape({ ...options, ...params });
+
+export default (params) => scrape({ ...options, ...params });

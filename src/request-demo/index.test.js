@@ -1,11 +1,11 @@
-const scrape = require('./index')
+import cheerio from 'cheerio';
+import scrape from './index'
 
 jest.setTimeout(50000);
-describe('request with cheerio :', () => {
+describe('request-demo :', () => {
     test('should response the cheerio', async () => {
         return await scrape().then($ => {
-            // console.log($.html())
-            return expect(typeof $).toBe('function');
+            return expect(typeof $).toEqual(typeof cheerio);
         });
     });
 
@@ -13,7 +13,6 @@ describe('request with cheerio :', () => {
         return await scrape({
             uri: "https://www.google.com/search?num=50&source=hp&ei=_7sQWsxIyvnAAtatovgN&q=me&oq=me&gs_l=psy-ab.3..35i39k1l2j0i67k1l3j0j0i131k1j0l3.2903.3059.0.3315.3.2.0.0.0.0.93.181.2.2.0....0...1.1.64.psy-ab..1.2.181.0...0.G5YDo4vOG8w"
         }).then($ => {
-            // console.log($.html())
             return expect($('title').text()).toMatch(/Google/);
         });
     });
@@ -26,5 +25,3 @@ describe('request with cheerio :', () => {
         });
     });
 });
-
-
