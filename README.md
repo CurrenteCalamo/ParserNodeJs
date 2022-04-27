@@ -2,17 +2,17 @@
 ## Demo list
 Each demo written as separate applications.
 All demo are under the `./src` directory
-- [cheerio-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/cheerio-demo) - how to use cheerio on server side
+- [cheerio-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/cheerio-demo) - how to use cheerio on server side
 
-- [puppeteer-cheerio-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/puppeteer-cheerio-demo) - wrap puppeteer content to cheerio
-- [puppeteer-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/puppeteer-demo) - the minimal code needs to run puppeteer
-- [puppeteer-download-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/puppeteer-download-demo) - how to download file using puppeteer
+- [puppeteer-cheerio-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/puppeteer-cheerio-demo) - wrap puppeteer content to cheerio
+- [puppeteer-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/puppeteer-demo) - the minimal code needs to run puppeteer
+- [puppeteer-download-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/puppeteer-download-demo) - how to download file using puppeteer
 
-- [puppeteer-login-github](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/puppeteer-login-github) - common steps to login somewhere and receive some userfull private information.
+- [puppeteer-login-github](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/puppeteer-login-github) - common steps to login somewhere and receive some userfull private information.
 
-- [request-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/request-demo) - common logic to to receive static html
+- [request-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/request-demo) - common logic to to receive static html
 
-- [save-from-demo](https://github.com/pirateminds/crawler-cases-demo/tree/master/src/save-from-demo) - show how to fight with ubnormal behavior sites, without puppeteer using sanbox on serverside.
+- [save-from-demo](https://github.com/CurrenteCalamo/ParserNodeJs/tree/master/src/save-from-demo) - show how to fight with ubnormal behavior sites, without puppeteer using sanbox on serverside.
 ---
 ## Install
 
