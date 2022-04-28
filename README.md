@@ -19,6 +19,7 @@ All demo are under the `./src` directory
 ```javascript
 npm install
 mv ./src/config.template.js ./src/config.js
+mkdir ./src/download
 ```
 
 The config used to set some private infos. Like github `login` / `password`. Site tokens.
