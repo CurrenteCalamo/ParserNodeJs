@@ -14,17 +14,16 @@ const options = {
 };
 
 
-const writeFileInterceptor = ({ file }) => {
-    return (e) => {
-        console.log(e._url)
-        if (file.regexp.test(e._url)) {
+const writeFileInterceptor = ({ file }) => (e) => {
+
+    if (file.regexp.test(e._url)) {
+        e.buffer().then(buffer => {
             console.log(buffer.toString())
-            e.buffer().then(buffer => {
-                appendFileSync(file.path, buffer.toString());
-            });
-        }
+            appendFileSync(file.path, buffer.toString());
+        });
     }
 }
+
 
 const scrape = async (options) => {
 
